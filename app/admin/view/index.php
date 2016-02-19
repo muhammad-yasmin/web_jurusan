@@ -21,8 +21,11 @@
 			body{
 				overflow-x: hidden;
 			}
-			#btnBackFromPrev, #btnBackFromUpdt, #btnUpdt, #btnBackFromAdd {
+			#btnBackFromPrev, #btnBackFromUpdt, #btnAdd, #btnUpdt, #btnBackFromAdd {
 				margin: 55px 0 0 0;
+			}
+			td > a {
+				cursor: pointer;
 			}
 		</style>
 	</head>
@@ -47,9 +50,9 @@
 							</a>
 							<ul class="dropdown-menu animated fadeInLeft">
 								<li class="arrow"></li>
-								<li data-toggle="modal" data-target="#myModal"><a href="#">Edit Profile</a></li>
+								<li><a href="#">Edit Profile</a></li>
 								<li class="divider"></li>
-								<li><a href="#" id="logout">Log Out</a></li>
+								<li><a id="logout">Log Out</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -87,16 +90,10 @@
 							include "view/industri.php";
 						} else if($_GET['page']=='program_keahlian'){
 							include "view/program_keahlian.php";
-						} else if($_GET['page']=='agama'){
-							include "view/agama.php";
-						} else if($_GET['page']=='goldar'){
-							include "view/goldar.php";
-						} else if($_GET['page']=='status'){
-							include "view/status.php";
 						} else if($_GET['page']=='siswa'){
 							include "siswa.php";
 						} else if($_GET['page']=='guru'){
-							include "view/guru.php";
+							include "guru.php";
 						} else if($_GET['page']=='alumni'){
 							include "view/alumni.php";
 						} else if($_GET['page']=='kantor'){
@@ -112,7 +109,6 @@
 			<!-- <a class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a> -->
 		<script src="../../../assets/js/bootstrap.min.js"></script>
 		<script src="../../../assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-		<script src="../../../assets/plugins/jquery-ui/jquery-ui-1.10.3.min.js"></script>
 		<script src="../../../assets/js/apps.min.js"></script>
 		<!-- ================== END PAGE LEVEL JS ================== -->
 		<script src="../../../assets/js/app.js"></script>

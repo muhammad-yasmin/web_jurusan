@@ -1,4 +1,4 @@
-<a id="btnShowModal" class="btn btn-primary" data-toggle="modal" href='#modal' style="display:none;">Show Modal</a>
+<a class="btn btn-flat btn-info" id="btnModal" style="display:none;" data-toggle="modal" href='#modal'>Show Modal Message</a>
 <div class="modal fade" id="modal">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -7,7 +7,7 @@
 				<h4 class="modal-title">&nbsp;</h4>
 			</div>
 			<div class="modal-body">
-				<p id="isiModal"></p>
+				<p id="idPesanModal"></p>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -15,8 +15,8 @@
 		</div>
 	</div>
 </div>
-<a id="btnShowModalDel" class="btn btn-primary" data-toggle="modal" href='#modalDel' style="display:none;">Show Modal Delete</a>
-<div class="modal fade" id="modalDel">
+<a class="btn btn-flat btn-info" id="btnModalHapus" style="display:none;" data-toggle="modal" href='#modalHapus'>Show Modal Message</a>
+<div class="modal fade" id="modalHapus">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -24,11 +24,12 @@
 				<h4 class="modal-title">&nbsp;</h4>
 			</div>
 			<div class="modal-body">
-				<p id="isiModalHapus"></p>
+				<!-- <input type="text" id="idNya" name="idNya"> -->
+				<p id="idPesanModalHapus"></p>
 			</div>
 			<div class="modal-footer">
-				<button type="button" id="btnModalNo" class="btn btn-default" data-dismiss="modal">Tidak</button>
-				<button type="button" id="btnModalYes" class="btn btn-danger">Ya</button>
+				<button type="button" class="btn btn-default" id="btnCancel" data-dismiss="modal">Tidak</button>
+				<button type="button" class="btn btn-danger" id="btnOke" data-dismiss="modal">Ya</button>
 			</div>
 		</div>
 	</div>

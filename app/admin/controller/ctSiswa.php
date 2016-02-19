@@ -1,12 +1,12 @@
 <script src="../../../assets/plugins/jquery/jQuery-2.1.4.min.js"></script>
 <script type="text/javascript">
-	function showModal(msg){
-		$("#isiModal").val(msg);
-		$("#btnShowModal").click();
+	function showModal(isiPesan){
+		$("#idPesanModal").html(isiPesan);
+		$("#btnModal").click();
 	}
-	function showModalDel(msg){
-		$("#isiModalHapus").val(msg);
-		$("#btnShowModalDel").click();
+	function showModalHapus(isiPesan){
+		$("#idPesanModalHapus").html(isiPesan);
+		$("#btnModalHapus").click();
 	}
 	function loadSiswa(){
 		$.ajax({
@@ -74,7 +74,6 @@
 			},
 			success: function(data){
 				showModal("Berhasil update data !");
-				// showModal(data);
 				$("#pnlUpdt").hide('slow', function(){
 					loadSiswa();
 					$("#pnlData").show('slow');
@@ -82,6 +81,34 @@
 			},
 			error: function(xhr){
 				showModal("Gagal update data !");
+			}
+		});
+	}
+	function loadHapus(id){
+		$.ajax({
+			url: '../model/loadHapus.php',
+			type: 'post',
+			data: {
+				id: id
+			},
+			success: function(data){
+				showModal("Berhasil hapus data !");
+				loadSiswa();
+			},
+			error: function(xhr){
+				showModal("Gagal hapus data");
+			}
+		});
+	}
+	function formAddSiswa(){
+		$.ajax({
+			url: '../model/formAddSiswa.php',
+			data: {},
+			success: function(data){
+				$("#addSiswa").html(data);
+			},
+			error: function(xhr){
+				showModal("Gagal load form");
 			}
 		});
 	}
@@ -94,6 +121,13 @@
 		// showModal(id);
 		loadFormUpdate(id);
 		keForm();
+	}
+	function btn_del(id){
+		showModalHapus("Apakah anda yakin akan menghapus ?");
+		$("#btnModalYes").click(function(){
+			loadHapus(id);
+			loadSiswa();
+		});
 	}
 	function kePreview(){
 		$("#pnlUpdt").hide('slow', function(){
@@ -118,13 +152,24 @@
 		// showModal(id);
 	});
 	$("#btnBackFromPrev").click(function(event) {
-		$("#pnlPrev").hide('slow', function() {
-			$("#pnlData").show('slow');
+		$("#pnlPrev").slideUp('slow', function() {
+			$("#pnlData").slideDown('slow');
 		});
 	});
 	$("#btnBackFromUpdt").click(function(){
-		$("#pnlUpdt").hide('slow', function(){
-			$("#pnlData").show('slow');
+		$("#pnlUpdt").slideUp('slow', function(){
+			$("#pnlData").slideDown('slow');
+		});
+	});
+	$("#btnAddSiswa").click(function(event) {
+		$("#pnlData").slideUp('slow', function() {
+			$("#pnlAdd").slideDown('fast');
+			formAddSiswa();
+		});
+	});
+	$("#btnBackFromAdd").click(function(event) {
+		$("#pnlAdd").slideUp('slow', function() {
+			$("#pnlData").slideDown('slow');
 		});
 	});
 </script>

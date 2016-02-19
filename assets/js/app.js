@@ -1,10 +1,7 @@
-$(document).ready(function(){
-	$('#example').DataTable({ });
-});
 $('#logout').click(function(){
 	$('.screen').addClass('screen-off');
 	setTimeout(function(){
-		window.location.href = "../controller/logout.php";
+		window.location.href = "logout.php";
 	}, 650);
 });
 $(document).ready(function(){
@@ -15,5 +12,5 @@ $(document).ready(function(){
 });
 $(document).ready(function() {
 	App.init();
-	DashboardV2.init();
+	// DashboardV2.init();
 });

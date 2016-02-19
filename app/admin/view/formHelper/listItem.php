@@ -1,19 +1,14 @@
 <ul class="nav" id="nav">
-	<li class="nav-header">Navigation</li>
-	<li class="has-sub">
-		<a href="javascript:;">
-			<b class="caret pull-right"></b>
-			<i class="fa fa-laptop"></i>
-			<span>Form</span>
+	<li class="nav-header">Menu</li>
+	<li id="siswa">
+		<a href="?page=siswa">
+			<i class="fa fa-user"></i>
+			<span>Siswa</span>
 		</a>
-		<ul class="sub-menu">
-			<li id="siswa"><a href="?page=siswa"><span> Siswa</span></a></li>
-            <li id="anak"><a href="?page=status"><span> Status Anak</span></a></li>
-		</ul>
 	</li>
 	<li id="guru">
 		<a href="?page=guru">
-			<i class="fa fa-user"></i>
+			<i class="fa fa-users"></i>
 			<span>Guru</span>
 		</a>
 	</li>

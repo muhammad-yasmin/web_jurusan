@@ -63,7 +63,6 @@
 	<script src="../../assets/plugins/jquery/jQuery-2.1.4.min.js"></script>
 	<script src="../../assets/js/dashboard-v2.min.js"></script>
 	<script src="../../assets/plugins/jquery/jquery-migrate-1.1.0.min.js"></script>
-	<script src="../../assets/plugins/jquery-ui/ui/minified/jquery-ui.min.js"></script>
 	<script src="../../assets/plugins/jquery-ui/jquery-ui-1.10.3.min.js"></script>
 	<script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 	<script src="../../assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>

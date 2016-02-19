@@ -115,18 +115,6 @@
 					</p>
 				</div>
 			</a>
-<!-- 
-			<a href="../login_admin/" class="a-class">
-				<div class="col-lg-4 col-sm-4 focus-box blue wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
-					<div class="service-icon">
-						<i class="pixeden fa fa-user-secret fa-4x"></i>
-					</div>
-					<h5 class="blue-border-bottom">Admin</h5>
-					<p>
-						Fitur untuk admin yang disediakan untuk mengolah suatu data, yang selanjutnya akan diproses / dipergunakan oleh para user
-					</p>
-				</div>
-			</a> -->
 		</div>
 		<div class="other-focus-list wow fadeInUp animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
 			<!-- <i class="fa fa-code fa-2x"></i> -->
@@ -370,12 +358,12 @@
 <section class="contact-us" id="contact">
 	<div class="container">
 		<div class="section-header">
-			<h2 class="white-text">Get in Touch</h2>
+			<h2 class="white-text">Kritik dan Saran</h2>
 		</div>
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="headernya col-md-4 wow fadeInLeft" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
-					<h4>Kritik Saran</h4>
+					<!--<h4>Kritik Saran</h4>-->
 				</div>
 				<form role="form" id="formnya" method="post">
 					<div class="wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
@@ -390,7 +378,7 @@
 						</div>
 					</div>
 				</form>
-				<div class="com-md-6">
+				<div style="margin-left:450px;">
 					<button id="btnnya" class="btn btn-primary btn-lg blue-btn">Kirim</button>
 				</div>
 			</div>
@@ -409,7 +397,7 @@
 						<i class="fa fa-2x fa-phone"></i><span>(0341) 477087</span>
 					</div>
 					<div class="col-lg-12 kontaknya">
-						<i class="fa fa-2x fa-google"></i><span>info@smkn5malang.sch.id</span>
+						<i class="fa fa-2x fa-envelope"></i><span>info@smkn5malang.sch.id</span>
 					</div>
 				</div>
 			</div>
@@ -420,10 +408,15 @@
 <footer>
 	<div class="copy">
 		<ul class="social">
-			<li><a href="https://www.facebook.com/Smkn5Malang/?fref=ts"><i class="fa fa-facebook"></i></a></li>
+			<li><a href="https://www.facebook.com/muhammadyasmin940/?fref=ts"><i class="fa fa-facebook"></i></a></li>
 			<li><a href="https://twitter.com/fadil21"><i class="fa fa-twitter"></i></a></li>
 			<li><a href="https://www.github.com/muhammad-yasmin/"><i class="fa fa-github"></i></a></li>
-			<li><a href="https://www.github.com/muhammad-yasmin/"><i class="fa fa-gmail"></i></a></li>
+			<li><a href="mailto:yasminmuh2615@gmail.com"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="mailto:yasmin@webrpl.smkn5malang.sch.id"><i class="fa fa-envelope"></i></a></li>
+            <li><a href="mailto:yasmin@webrpl.smkn5malang.sch.id"><i class="fa fa-medium"></i></a></li>
+            <li><a href="mailto:yasmin@webrpl.smkn5malang.sch.id"><i class="fa fa-codepen"></i></a></li>
+            <li><a href="mailto:yasmin@webrpl.smkn5malang.sch.id"><i class="fa fa-stack-overflow"></i></a></li>
+            <li><a href="mailto:yasmin@webrpl.smkn5malang.sch.id"><i class="fa fa-linkedin"></i></a></li>
 		</ul>
 		&copy; RPL SMKN 5 MALANG 2015.
 	</div>
