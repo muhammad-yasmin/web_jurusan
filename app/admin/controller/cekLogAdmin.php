@@ -22,7 +22,8 @@
 	} else {
 		$hasilLog = $con->cekLogAdmin($c,$d);
 
-		if ($_SESSION['statusLog'] == true) {
+		if ($_SESSION['statusLog'] == "true") {
+			// echo $_SESSION['statusLog'];
 			?>
 			<script>
 				window.location.replace("../view/");
@@ -31,10 +32,9 @@
 		} else {
 			?>
 			<script>
-				window.top.window.hasilLog('gakenek');
-				window.location.replace('../admin/');
+				alert("Maaf, anda belum terdaftar");
+				window.location = "../";
 			</script>
 			<?php
 		}
 	}
- ?>

@@ -45,7 +45,7 @@
 					<td align="center">
 						<a onclick="btn_prev(<?php echo $array['id_siswa']; ?>);" title="Lihat"><i class="fa fa-eye"></i></a>
 						<a onclick="btn_edit(<?php echo $array['id_siswa']; ?>);" title="Edit"><i class="fa fa-edit"></i></a>
-						<a onclick="btn_del(<?php echo $array['id_siswa']; ?>);" title="Hapus"><i class="fa fa-trash"></i></a>
+						<a onclick="btn_del(<?php echo $array['id_siswa']; ?>);" title="Hapus"><i class="fa fa-trash"></i></a> 
 					</td>
 				</tr>
  				<?php

@@ -1,0 +1,264 @@
+body {
+	background-color: #f2f2f2;
+	font-family: Overpass;
+	font-weight: 300;
+	font-size: 16px;
+	color: #555;
+
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+	font-family: Overpass, sans-serif;
+	font-weight: 300;
+	color: #333;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h3 {
+	color: #95a5a6;
+}
+
+h4 {
+	color: #95a5a6;
+	font-size: 20px;
+}
+
+/* Paragraph & Typographic */
+p {
+	line-height: 28px;
+	margin-bottom: 25px;
+	font-size: 16px;
+}
+
+.centered {
+	text-align: center;
+}
+
+/* Links */
+a {
+	color: #3498db;
+	word-wrap: break-word;
+
+	-webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-o-transition: color 0.1s ease-in, background 0.1s ease-in;
+	transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover,
+a:focus {
+	color: #7b7b7b;
+	text-decoration: none;
+	outline: 0;
+}
+
+a:before,
+a:after {
+	-webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-o-transition: color 0.1s ease-in, background 0.1s ease-in;
+	transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+ hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+.navbar-default {
+	background-color: #3498db;
+	border-color: transparent;
+}
+
+.navbar-default .navbar-brand {
+	color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: white;
+}
+
+/* Helpers */
+
+.mt {
+	margin: 70px 0 65px 0;
+}
+
+.form-control {
+	height: 42px;
+	font-size: 18px;
+}
+
+/* HeaderWrap */
+#headerwrap {
+	/* background: url(../img/bg01.jpg) no-repeat center top; */
+	background-color: #3498db;
+	margin-top: -20px;
+	padding-top:200px;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+	
+	-webkit-background-size: 100%;
+	-moz-background-size: 100%;
+	-o-background-size: 100%;
+	background-size: 100%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#headerwrap h1 {
+	font-family: Overpass;
+	text-align: center;
+	margin-bottom: 0px;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+#headerwrap h3 {
+	text-align: center;
+	font-family: Overpass;
+	margin-bottom: 15px;
+	color: white;
+	letter-spacing: 1px;
+}
+#headerwrapInfo {
+	/* background: url(../img/bg01.jpg) no-repeat center top; */
+	background-color: #3498db;
+	margin-top: -20px;
+	padding: 50px 0 50px 0;
+	min-height: 250px;
+	width: 100%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+#headerwrapInfo h1 {
+	font-family: Overpass;
+	text-align: center;
+	margin-bottom: 0px;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+#headerwrapInfo h3 {
+	text-align: center;
+	font-family: Overpass;
+	margin-bottom: 15px;
+	color: white;
+	letter-spacing: 1px;
+}
+.icon {
+	font-size: 1.5em;
+	margin: 55px 0 55px 0;
+}
+.icon-stats {
+	font-size: 1em;
+	margin: 55px 0 55px 0;
+}
+.skill {
+	margin: 45px 0 0 0 ;
+}
+.skill > .skill-count {
+	margin-bottom: 65px;
+}
+#footer {
+	width: 100%;
+	height: 35%;
+	padding: 20px 0 0 0;
+	color: #fff;
+	background-color: #000;
+}
+.social li{
+	display:inline-block;
+	margin:5px
+}
+.social li a{
+	color:#939393;
+	font-size:18px
+}
+.social li a:hover{
+	color:#e96656
+}
+.social li{
+	display:inline-block;
+	margin:5px
+}
+.social li a{
+	color:#939393;
+	font-size:18px
+}
+.social li a:hover{
+	color:#e96656
+}
+i {
+	margin: 8px;
+	color: #3498db; 
+}
+.inputTeks{
+  border:0;
+  text-align:left;
+  text-transform:none;
+  padding:9px;
+  min-height:46px;
+  margin: 10px 0 10px 0;
+  padding-left:15px;
+  display:inline-block;
+  border-radius:4px;
+  background:#efefef;
+}
+.inputTeksArea{
+  border:0;
+  resize: none;
+  text-align:left;
+  text-transform:none;
+  padding:9px;
+  margin: 10px 0 10px 0;
+  min-height:250px;
+  padding-left:15px;
+  display:inline-block;
+  border-radius:4px;
+  background:#efefef;
+}
+.headernya {
+  color: #fff;
+  text-align: left;
+}
+.kontaknya {
+  margin: 10px 0 10px 0;
+  color: #000;
+  text-align: left;
+  padding: 12px 0 0 0;
+}
+.kontaknya span {
+  margin-left: 25px;
+  font-size: 1em;
+}
+.brand-align {
+	text-align: center;
+	font-size: 25px;
+	width: 100%;
+}
+.news-image {
+	background-color: #3498db;
+}
+.login-content {
+	margin: 40px 0 0 0;
+}

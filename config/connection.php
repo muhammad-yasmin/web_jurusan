@@ -11,7 +11,7 @@
 			$pass = "muhammadsaw1";
 			$db = "db_web_jur";
 			mysql_connect($host, $user, $pass) or die ("Koneksi gagal");
-			mysql_select_db($db);
+			mysql_select_db($db) or die ("Database tidak ditemukan");
 		}
 		function cekLog($a,$b)
 		{
@@ -37,7 +37,7 @@
 			$us = mysql_real_escape_string($c);
 			$pa = md5("pass".$d."word");
 			//-----------------------------------
-			$q = "SELECT * FROM admin WHERE username='$us' AND pass='$pa'";
+			$q = "SELECT * FROM admin WHERE username='$us' OR pass='$pa'";
 			$eks_q = mysql_query($q);
 			$row_q = mysql_num_rows($eks_q);
 			if ($row_q == 1) {
@@ -46,11 +46,12 @@
 				$_SESSION['id_admin'] = $assoc_admin['id'];
 				$_SESSION['nama_admin'] = $assoc_admin['nama'];
 				$_SESSION['lvl_admin'] = $assoc_admin['level'];
-				$_SESSION['statusLog'] = true;
+				$_SESSION['statusLog'] = "true";
 				//---------------------------------------------
-				return true;
+				// return true;
 			} else {
-				return false;
+				// return false;
+				$_SESSION['statusLog'] = "false";
 			}
 		}
 		function cekLogGuru($u,$p)

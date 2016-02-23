@@ -1,8 +1,9 @@
 <!-- <script src="../../../assets/plugins/jquery/jQuery-2.1.4.min.js"></script> -->
 <script type="text/javascript">
-	$(document).ready(function() {
-		App.init();
-	});
+	function showModal(isiPesan){
+		$("#idPesanModal").html(isiPesan);
+		$("#btnModal").click();
+	}
 	function validasi(){
 		hasil = true;
 
@@ -26,4 +27,7 @@
 			alert("Coba lagi");
 		}
 	}
+	$(document).ready(function() {
+		App.init();
+	});
 </script>

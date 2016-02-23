@@ -6,4 +6,12 @@
 	font-family: "Decanter";
 	font-style: normal;
 	src: url(../fonts/Decanter-Regular.otf) format('opentype');
+
+	font-family: "Lobster";
+	font-style: normal;
+	src: url(../fonts/LobsterTwo-Regular.otf) format('opentype');
+
+	font-family: "Bebas";
+	font-style: normal;
+	src: url(../fonts/bebas.ttf) format('truetype');
 }

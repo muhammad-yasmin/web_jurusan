@@ -1,4 +1,4 @@
-<script src="../../../assets/plugins/jquery/jQuery-2.1.4.min.js"></script>
+<script src="assets/js/jQuery-2.1.4.min.js"></script>
 <script>
 	function showModal(isinya){
 		$("#isimodalnya").html(isinya);
@@ -10,7 +10,7 @@
 	});
 	function addKritikSaran(){
 		$.ajax({
-			url: 'model/addSaran.php',
+			url: 'app/index/model/addSaran.php',
 			type: 'post',
 			data: {
 				nama : $("#namanya").val(),
@@ -31,22 +31,24 @@
 		$("#emailnya").val("");
 		$("#isinya").val("");
 	}
+	$("#infoSiswa").click(function(){
+		window.location = "app/index/view/infoSiswa.php";
+	});
+	$("#infoGuru").click(function(){
+		window.location = "app/index/view/infoGuru.php";
+	});
+	$("#infoAlumni").click(function(){
+		window.location = "app/index/view/infoAlumni.php";
+	});
 	$(document).ready(function() {
-		$("#owl-demo").owlCarousel({
-		  autoPlay: 3000,
-		  items : 4,
-		  itemsDesktop : [1199,3],
-		  itemsDesktopSmall : [979,3]
-
-		});
-		$("#owl-products").owlCarousel({
-			slideSpeed : 300,
+		$("#owlGuru1").owlCarousel({
+			slideSpeed : 500,
 			autoPlay: 5000,
 			paginationSpeed : 400,
 			singleItem:true
 		});
 		$("#owlGuru").owlCarousel({
-			navigation : true,
+			autoPlay: 3000,
 			slideSpeed : 800,
 			paginationSpeed : 500,
 			singleItem:true

@@ -1,14 +1,26 @@
-<?php require '../model/admin.php'; ?>
+<?php 
+	require '../model/admin.php'; 
+	if(!isset($_SESSION)){
+		session_start();
+		if (!isset($_SESSION['statusLog']) OR !isset($_SESSION['nama_admin'])) {
+			?>
+			<script>
+				window.location = "../";
+			</script>
+			<?php
+		}
+	}
+ ?>
 <html>
 	<head>
 		<meta charset="utf-8" />
 		<title>CPanel | Website Jurusan</title>
 		<!-- ================== BEGIN BASE CSS STYLE ================== -->
 		<link rel="shortcut icon" href="../../../assets/img/logo128.png">
-		<link href="../../../assets/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css" rel="stylesheet" />
+		<link href="../../../assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
 		<link href="../../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="../../../assets/fonts/font-awesome/css/font-awesome.min.css">
-		<link href="../../../assets/css/animate.css" rel="stylesheet" />
+		<link href="../../../assets/css/animate.min.css" rel="stylesheet" />
 		<link href="../../../assets/css/style.min.css" rel="stylesheet" />
 		<link href="../../../assets/css/theme/default.css" rel="stylesheet" id="theme" />
 		<link rel="stylesheet" href="../../../assets/css/style.css">
@@ -20,6 +32,7 @@
 		<style>
 			body{
 				overflow-x: hidden;
+				font-family: Overpass;
 			}
 			#btnBackFromPrev, #btnBackFromUpdt, #btnAdd, #btnUpdt, #btnBackFromAdd {
 				margin: 55px 0 0 0;
@@ -86,8 +99,8 @@
 							include "view/awal.php";
 						} else if($_GET['page']=='produk'){
 							include "view/produk.php";
-						} else if($_GET['page']=='industri'){
-							include "view/industri.php";
+						} else if($_GET['page']=='galeri'){
+							include "galeri.php";
 						} else if($_GET['page']=='program_keahlian'){
 							include "view/program_keahlian.php";
 						} else if($_GET['page']=='siswa'){
@@ -106,7 +119,7 @@
 					?>
 				</div>
 			</div>
-			<!-- <a class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a> -->
+			<a class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
 		<script src="../../../assets/js/bootstrap.min.js"></script>
 		<script src="../../../assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 		<script src="../../../assets/js/apps.min.js"></script>
