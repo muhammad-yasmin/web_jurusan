@@ -82,65 +82,66 @@
  		<div class="col-md-4"><p><?php echo $array['nama_ibu']; ?></p></div>
  	</div>
 </div>
-<form action="" id="formnya" style="display:none;">
+<div style="display:none;">
 	<div class="col-lg-3">
 	 	<div class="container">
 	 		<div class="col-md-4">
-	 			<?php echo "<img src='../../../assets/img/siswa/$array[foto]' alt='Foto Siswa' width='200' height='200'/> "; ?>
+	 			<?php// echo "<img src='../../../assets/img/siswa/$array[foto]' alt='Foto Siswa' width='200' height='200'/> "; ?>
+	 			<input type="text" name="printFoto" id="foto" value="<?php echo $array['foto']; ?>">
 	 		</div>
 	 	</div>
 	 	<div class="container">
 	 		<div class="col-md-4">
-	 			<?php echo $array['qr']; ?>
+			 	<input type="text" name="printQr" id="qr" value="<?php echo $array['qr']; ?>" />
 	 		</div>
 	 	</div>
 	 </div>
 	 <div class="col-lg-6">
 	 	<div class="container">
 	 		<div class="col-md-2"><p>NIS</p></div>
-	 		<div class="col-md-4"><p><?php echo $array['nis']; ?></p></div>
+	 		<div class="col-md-4"><input type="text" name="printNis" value="<?php echo $array['nis']; ?>" class="form-control"/></div>
 	 	</div>
 	 	<div class="container">
 	 		<div class="col-md-2"><p>Nama</p></div>
-	 		<div class="col-md-4"><p><?php echo $array['nama_siswa']; ?></p></div>
+	 		<div class="col-md-4"><input type="text" name="printNama" value="<?php echo $array['nama_siswa']; ?>"></div>
 	 	</div>
 	 	<div class="container">
 	 		<div class="col-md-2"><p>Tempat, Tanngal Lahir</p></div>
 	 		<div class="col-md-4">
-	 			<p><?php echo $array['tl_siswa'].', '.$array['tgl_siswa']; ?></p>
+	 			<input type="text" name="ttl" id="ttl" value="<?php echo $array['tl_siswa'].', '.$array['tgl_siswa']; ?>" />
 	 		</div>
 	 	</div>
 	 	<div class="container">
 	 		<div class="col-md-2"><p>Agama</p></div>
-	 		<div class="col-md-4"><p><?php echo $array['agama']; ?></p></div>
+	 		<div class="col-md-4"><input type="text" name="agama" id="agama" value="<?php echo $array['agama']; ?>"></div>
 	 	</div>
 	 	<div class="container">
 	 		<div class="col-md-2"><p>Alamat</p></div>
-	 		<div class="col-md-4"><p><?php echo $array['alamat']; ?></p></div>
+	 		<div class="col-md-4"><input type="text" name="alamat" id="alamat" value="<?php echo $array['alamat']; ?>"></div>
 	 	</div>
 	 	<div class="container">
 	 		<div class="col-md-2"><p>Tahun Pelajaran</p></div>
-	 		<div class="col-md-4"><p><?php echo $array['th_pelajaran']; ?></p></div>
+	 		<div class="col-md-4"><input type="text" name="tapel" id="tapel" value="<?php echo $array['th_pelajaran']; ?>"></div>
 	 	</div>
 	 	<div class="container">
 	 		<div class="col-md-2"><p>Kelas</p></div>
-	 		<div class="col-md-4"><p><?php echo $array['kelas']; ?></p></div>
+	 		<div class="col-md-4"><input type="text" name="kelas" id="kelas" value="<?php echo $array['kelas']; ?>" /></div>
 	 	</div>
 	 	<div class="container">
 	 		<div class="col-md-2"><p>Jurusan</p></div>
-	 		<div class="col-md-4"><p><?php echo $array['nama_jurusan']; ?></p></div>
+	 		<div class="col-md-4"><input type="text" name="jurusan" id="jurusan" value="<?php echo $array['nama_jurusan']; ?>"></div>
 	 	</div>
 	 	<div class="container">
 	 		<div class="col-md-2"><p>Golongan Darah</p></div>
-	 		<div class="col-md-4"><p><?php echo $array['nama_goldar']; ?></p></div>
+	 		<div class="col-md-4"><input type="text" name="gol" id="gol" value="<?php echo $array['nama_goldar']; ?>"></div>
 	 	</div>
 	 	<div class="container">
 	 		<div class="col-md-2"><p>Nama Ayah</p></div>
-	 		<div class="col-md-4"><p><?php echo $array['nama_ayah']; ?></p></div>
+	 		<div class="col-md-4"><input type="text" name="ayah" id="ayah" value="<?php echo $array['nama_ayah']; ?>"></div>
 	 	</div>
 	 	<div class="container">
 	 		<div class="col-md-2"><p>Nama Ibu</p></div>
-	 		<div class="col-md-4"><p><?php echo $array['nama_ibu']; ?></p></div>
+	 		<div class="col-md-4"><input type="text" name="ibu" id="ibu" value="<?php echo $array['nama_ibu']; ?>" /></div>
 	 	</div>
 	</div>
-</form>
+</div>

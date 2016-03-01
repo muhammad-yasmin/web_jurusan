@@ -7,7 +7,7 @@
 		</ol>
 	</div>
 	<div class="col-lg-12">
-		<div class="panel panel-inverse" id="pnlData">
+		<div class="panel panel-primary" id="pnlData">
 			<div class="panel-heading">
 				<div class="panel-heading-btn">
 					<a id="btnAddSiswa" class="btn btn-xs btn-success"><i class="fa fa-plus"></i> Tambah</a>
@@ -19,7 +19,7 @@
 			</div>
 		</div>
 	
-		<div class="panel panel-inverse" id="pnlPrev" style="display:none;">
+		<div class="panel panel-primary" id="pnlPrev" style="display:none;">
 			<div class="panel-heading">
 				<h4 class="panel-title">Preview Siswa</h4>
 			</div>
@@ -31,7 +31,7 @@
 			</div>
 		</div>
 	
-		<div class="panel panel-inverse" id="pnlUpdt" style="display:none;">
+		<div class="panel panel-primary" id="pnlUpdt" style="display:none;">
 			<div class="panel-heading">
 				<h4 class="panel-title">Update Siswa</h4>
 			</div>
@@ -44,7 +44,7 @@
 			</div>
 		</div>
 	
-		<div class="panel panel-inverse" id="pnlAdd" style="display:none;">
+		<div class="panel panel-primary" id="pnlAdd" style="display:none;">
 			<div class="panel-heading">
 				<h4 class="panel-title">Tambah Data Siswa</h4>
 			</div>
@@ -61,6 +61,6 @@
 <?php 
 	require '../controller/ctSiswa.php';
 	echo "<script src='../../../assets/plugins/datatables/jquery.dataTables.js'></script>
-		  <script src='../../../assets/plugins/datatables/dataTables.bootstrap.js'></script>";
+		<script src='../../../assets/plugins/datatables/dataTables.bootstrap.js'></script>";
 	require 'formHelper/modal.php';
  ?>

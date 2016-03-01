@@ -32,114 +32,19 @@
 					<div class="form-group">
 						<label class="col-md-2 control-label">Nama Lengkap</label>
 						<div class="col-md-8">
-							<input type="text" name="nama" class="form-control" value="<?php echo $w['nama']; ?>" placeholder="Nama Lengkap"  autocomplete="off" />
+							<input type="text" name="nama" class="form-control" value="<?php echo $w['nama_siswa']; ?>" placeholder="Nama Lengkap"  autocomplete="off" />
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-md-2 control-label">Alamat</label>
+						<label class="col-md-2 control-label">Jenis Kelamin</label>
 						<div class="col-md-8">
-							<input type="text" name="alamat" class="form-control" value="<?php echo $w['alamat']; ?>" placeholder="Alamat" autocomplete="off"  />
+							<input type="text" name="j_kel" class="form-control" value="<?php echo $w['jenis_kelamin']; ?>" placeholder="Jenis Kelamin" autocomplete="off"  />
 						</div>
 					</div>
 					<div class="form-group">
-						<label class="col-md-2 control-label">Agama</label>
+						<label class="col-md-2 control-label">Jurusan</label>
 						<div class="col-md-8">
-							<select class="form-control" name='agama' id='agama'>
-								<option value="">-- Pilih Agama --</option>
-								<?php
-								$nis_siswa =  $w['nis'];
-								$siswa_agama = mysql_query("SELECT siswa.agama FROM siswa WHERE nis = '$nis_siswa'");
-								$assoc_siswa = mysql_fetch_assoc($siswa_agama);
-								$id_agama = $assoc_siswa['agama'];
-								$agama = mysql_query("SELECT * FROM agama");
-								$id = 1;
-								while ($array = mysql_fetch_assoc($agama)) {
-									if ($array['id'] == $id_agama) {
-										$selected = "selected";
-									} else {
-										$selected = "";
-									}
-								?>
-									<option value='<?php echo $id; ?>' <?php echo $selected; ?>><?php echo $array['agama']; ?></option>
-								<?php
-								$id++;
-								}
-							 ?>
-							</select>
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-2 control-label">Tempat Lahir</label>
-						<div class="col-md-8">
-							<input type="text" name="tempat_lhr" class="form-control" value="<?php echo $w['tempat_lhr']; ?>" placeholder="Tempat Lahir"  autocomplete="off" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-2 control-label">Tanggal Lahir</label>
-						<div class="col-md-8">
-							<input type="date" name="tgl_lhr" class="form-control" value="<?php echo $w['tgl_lhr']; ?>" placeholder="Tanggal Lahir"  autocomplete="off" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-2 control-label">Golongan Darah</label>
-						<div class="col-md-8">
-							<select class="form-control" name='gol_darah' id='agama'>
-								<option value="">-- Pilih Golongan Darah --</option>
-								<?php
-								$nis_siswa =  $w['nis'];
-								$siswa_goldar = mysql_query("SELECT siswa.gol_darah FROM siswa WHERE nis = '$nis_siswa'");
-								$assoc_siswa = mysql_fetch_assoc($siswa_goldar);
-								$id_goldar = $assoc_siswa['gol_darah'];
-								$goldarah = mysql_query("SELECT * FROM goldar");
-								$id = 1;
-								while ($array = mysql_fetch_assoc($goldarah)) {
-									if ($array['id'] == $id_goldar) {
-										$selected = "selected";
-									} else {
-										$selected = "";
-									}
-								?>
-									<option value='<?php echo $id; ?>' <?php echo $selected; ?>><?php echo $array['nama_goldar']; ?></option>
-								<?php
-								$id++;
-								}
-							 ?>
-							</select>
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-2 control-label">Kelas</label>
-						<div class="col-md-8">
-							<select class="form-control" name='kel' id='agama'>
-								<option value="">-- Pilih Kelas --</option>
-								<?php
-								$nis_siswa =  $w['nis'];
-								$siswa_kelas = mysql_query("SELECT siswa.id_kelas FROM siswa WHERE nis = '$nis_siswa'");
-								$assoc_siswa = mysql_fetch_assoc($siswa_kelas);
-								$id_kelas = $assoc_siswa['id_kelas'];
-								$kel = mysql_query("SELECT *
-													  FROM kelas
-													  ");
-								$id = 1;
-								while ($array = mysql_fetch_assoc($kel)) {
-									if ($array['id_kelas'] == $id_kelas) {
-										$selected = "selected";
-									} else {
-										$selected = "";
-									}
-								?>
-									<option value='<?php echo $id; ?>' <?php echo $selected; ?>><?php echo $array['nama_kelas']; ?></option>
-								<?php
-								$id++;
-								}
-							 ?>
-							</select>
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-2 control-label">Tahun Pelajaran</label>
-						<div class="col-md-8">
-							<input type="text" name="thn_pelajaran" class="form-control" value="<?php echo $w['thn_pelajaran']; ?>" placeholder="Tempat Lahir" autocomplete="off" />
+							<input type="text" name="jurusan" class="form-control" value="<?php echo $w['nama_jurusan']; ?>" placeholder="Tempat Lahir"  autocomplete="off" />
 						</div>
 					</div>
 					<div class="form-group">
@@ -148,8 +53,10 @@
 							<input type="file" name="image" class="form-control" id="uplImg"/>
 						</div>
 					</div>
-					<div class="col-md-4 col-md-offset-4">
-						<button type="submit" name="update" class="btn btn-sm btn-success">Simpan <i class="fa fa-save"></i></button>
+					<div class="form-group">
+						<div class="col-md-8 col-md-offset-8">
+							<button type="submit" name="update" class="btn btn-sm btn-success">Simpan <i class="fa fa-save"></i></button>
+						</div>	
 					</div>
 				</form>
 				<iframe src="#" id="iframe" name="iframe" frameborder="0" style="display:none;"></iframe>

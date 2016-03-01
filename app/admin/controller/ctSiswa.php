@@ -1,4 +1,4 @@
-<script src="../../../assets/plugins/jquery/jQuery-2.1.4.min.js"></script>
+<script src="../../../assets/js/jQuery-2.1.4.min.js"></script>
 <script type="text/javascript">
 	function showModal(isiPesan){
 		$("#idPesanModal").html(isiPesan);
@@ -92,7 +92,7 @@
 				id: id
 			},
 			success: function(data){
-				showModal("Berhasil hapus data !");
+				showModal(data);
 				loadSiswa();
 			},
 			error: function(xhr){
@@ -112,6 +112,35 @@
 			}
 		});
 	}
+	function insertSiswa(){
+		$.ajax({
+			url: '../model/insertSiswa.php',
+			data: {
+				nis: $("#nistambahnya").val(),
+				nama: $("#namatambahnya").val(),
+				tl: $("#tempattambahnya").val(),
+				tgl: $("#tanggaltambahnya").val(),
+				agama: $("#agamatambahnya").val(),
+				alamat: $("#alamattambahnya").val(),
+				tapel: $("#thpelajarantambahnya").val(),
+				kelas: $("#kelastambahnya").val(),
+				jurusan: $("#jurusantambahnya").val(),
+				gol: $("#goldartambahnya").val(),
+				ayah: $("#ayahtambahnya").val(),
+				ibu: $("#ibutambahnya").val()
+			},
+			success: function(data){
+				// showModal(data);
+				$("#pnlAdd").hide('slow', function() {
+					loadSiswa();
+					$("#pnlData").show('slow');
+				});
+			},
+			error: function(xhr){
+				showModal("Gagal");
+			}
+		});
+	}
 	function btn_prev(id){
 		// showModal(id);
 		loadPreview(id);
@@ -123,11 +152,11 @@
 		keForm();
 	}
 	function btn_del(id){
-		showModalHapus("Apakah anda yakin akan menghapus ?");
-		$("#btnModalYes").click(function(){
+		// showModal(id);
+		// showModalHapus("Apakah anda yakin akan menghapus ?");
 			loadHapus(id);
-			loadSiswa();
-		});
+		// $("#btnModalYes").click(function(){
+		// });
 	}
 	function kePreview(){
 		$("#pnlUpdt").hide('slow', function(){
@@ -150,6 +179,9 @@
 	$("#btnUpdt").click(function(){
 		updateSiswa();
 		// showModal(id);
+	});
+	$("#btnAdd").click(function() {
+		insertSiswa();
 	});
 	$("#btnBackFromPrev").click(function(event) {
 		$("#pnlPrev").slideUp('slow', function() {

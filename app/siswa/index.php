@@ -9,24 +9,17 @@
 		
 		<!-- ================== BEGIN BASE CSS STYLE ================== -->
 		<link rel="shortcut icon" href="../../assets/img/logo128.png">
-		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-		<link href="../../assets/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css" rel="stylesheet" />
-		<link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-		<link href="../../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-		<link href="../../assets/css/animate.css" rel="stylesheet" />
-		<link href="../../assets/css/style.min.css" rel="stylesheet" />
-		<link href="../../assets/css/style-responsive.min.css" rel="stylesheet" />
-		<link href="../../assets/css/theme/default.css" rel="stylesheet" id="theme" />
+		<link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../assets/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../../assets/css/animate.css">
+		<link rel="stylesheet" href="../../assets/css/style.min.css">
+		<link href="../../assets/css/theme/blue.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="../../assets/plugins/datatables/dataTables.bootstrap.css">
 		<!-- ================== END BASE CSS STYLE ================== -->
-		
-		<!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
-		<link href="../../assets/plugins/jquery-jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" />
-		<link href="../../assets/plugins/bootstrap-calendar/css/bootstrap_calendar.css" rel="stylesheet" />
-		<link href="../../assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" />
-		<link href="../../assets/plugins/morris/morris.css" rel="stylesheet" />
 		<link rel="stylesheet" href="../../assets/css/font.css">
-		<!-- ================== END PAGE LEVEL CSS STYLE ================== -->
 		
+		<!-- ================== BEGIN BASE JS ================== -->
+		<script src="../../assets/js/jQuery-2.1.4.min.js"></script>
 		<!-- ================== BEGIN BASE JS ================== -->
 		<script src="../../assets/plugins/pace/pace.min.js"></script>
 		<!-- ================== END BASE JS ================== -->
@@ -47,8 +40,7 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown navbar-user">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-								<?php echo "<img src='../../assets/img/siswa/$w[foto]' alt='' />" ?> 
-								<span class="hidden-xs"><?php echo $w['nama']; ?></span>
+								<span class="hidden-xs"><?php echo $w['nama_siswa']; ?></span>
 							</a>
 							<ul class="dropdown-menu animated fadeInLeft">
 								<li class="arrow"></li>
@@ -65,10 +57,10 @@
 					<ul class="nav">
 						<li class="nav-profile">
 							<div class="image">
-								<a href="javascript:;"><?php echo "<img src='../../assets/img/siswa/$w[foto]' alt='foto profil siswa' />" ?></a>
+								<a href="javascript:;"></a>
 							</div>
 							<div class="info">
-								<?php echo $w['nama']; ?>
+								<?php echo $w['nama_siswa']; ?>
 								<small><i class="fa fa-circle" style="color:green;"></i> Online</small>
 							</div>
 						</li>
@@ -82,10 +74,10 @@
 				<?php
 					if ($oyi == "dt_diri") {
 						require "view/dtSiswa.php";
-					} elseif ($oyi == "dt_ayah") {
-						require "view/dtAyah.php";
-					} elseif ($oyi == "dt_ibu") {
-						require "view/dtIbu.php";
+					// }elseif ($oyi == "dt_ayah") {
+					// 	require "view/dtAyah.php";
+					// } elseif ($oyi == "dt_ibu") {
+					// 	require "view/dtIbu.php";
 					} else {
 						require "view/404.php";
 					}
@@ -95,24 +87,12 @@
 		</div>
 		<!-- end page container -->
 		
-		<!-- ================== BEGIN BASE JS ================== -->
-		<script src="../../assets/plugins/jquery/jQuery-2.1.4.min.js"></script>
-		<script src="../../assets/plugins/jquery/jquery-migrate-1.1.0.min.js"></script>
-		<script src="../../assets/plugins/jquery-ui/jquery-ui-1.10.3.min.js"></script>
-		<script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../../assets/js/bootstrap.min.js"></script>
 		<script src="../../assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-		<script src="../../assets/plugins/jquery-cookie/jquery.cookie.js"></script>
-		<!-- ================== END BASE JS ================== -->
-		<script src="../../assets/plugins/morris/raphael.min.js"></script>
-		<script src="../../assets/plugins/morris/morris.js"></script>
-		<!-- <script src="../../assets/plugins/jquery-jvectormap/jquery-jvectormap-world-mill-en.js"></script> -->
-		<script src="../../assets/plugins/jquery-jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-		<script src="../../assets/plugins/jquery-jvectormap/jquery-jvectormap-world-merc-en.js"></script>
-		<script src="../../assets/plugins/bootstrap-calendar/js/bootstrap_calendar.min.js"></script>
-		<script src="../../assets/plugins/gritter/js/jquery.gritter.js"></script>
-		<script src="../../assets/js/dashboard-v2.min.js"></script>
 		<script src="../../assets/js/apps.min.js"></script>
 		<!-- ================== END PAGE LEVEL JS ================== -->
+		<script src="../../assets/js/app.js"></script>
+		
 		<?php require 'controller/ctSiswa.php'; ?>
 	</body>
 </html>

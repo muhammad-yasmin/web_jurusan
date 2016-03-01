@@ -16,38 +16,38 @@
  	<div class="container" style="display:none;">
  		<div class="col-md-2"><p>ID</p></div>
  		<div class="col-md-4">
- 			<input class="form-control" type="text" id="idNya">
+ 			<input class="form-control" type="text" id="idtambahnya">
  		</div>
  	</div>
  	<div class="container">
  		<div class="col-md-2"><p>NIS</p></div>
  		<div class="col-md-4">
- 			<input class="form-control" type="text" id="nisnya" autocomplete="off" placeholder="NISN">
+ 			<input class="form-control" type="text" id="nistambahnya" autocomplete="off" placeholder="NISN">
  		</div>
  	</div>
  	<div class="container">
  		<div class="col-md-2"><p>Nama</p></div>
  		<div class="col-md-4">
- 			<input type="text" id="namanya" placeholder="Nama" class="form-control" autocomplete="off">
+ 			<input type="text" id="namatambahnya" placeholder="Nama" class="form-control" autocomplete="off">
 		</div>
  	</div>
  	<div class="container">
  		<div class="col-md-2"><p>Tempat Lahir</p></div>
  		<div class="col-md-4">
- 			<input type="text" class="form-control" id="tempatnya" placeholder="Tempat Lahir" autocomplete="off">
+ 			<input type="text" class="form-control" id="tempattambahnya" placeholder="Tempat Lahir" autocomplete="off">
  		</div>
  	</div>
  	<div class="container">
  		<div class="col-md-2"><p>Tanngal Lahir</p></div>
  		<div class="col-md-4">
- 			<input type="text" class="form-control" id="tanggalnya" placeholder="Tanggal Lahir" autocomplete="off">
+ 			<input type="date" class="form-control" id="tanggaltambahnya" placeholder="Tanggal Lahir" autocomplete="off">
  		</div>
  	</div>
  	<!-- Agama baru -->
  	<div class="container">
  		<div class="col-md-2"><p>Agama</p></div>
  		<div class="col-md-4">
- 			<select name="agama" class="form-control" id="agamanya">
+ 			<select name="agama" class="form-control" id="agamatambahnya">
  				<option value="">-- Pilih Agama --</option>
  				<?php
  				$q_ambil_agama = "SELECT id, agama FROM agama";
@@ -67,14 +67,14 @@
  	<div class="container">
  		<div class="col-md-2"><p>Alamat</p></div>
  		<div class="col-md-4">
- 			<textarea name="alamat" id="alamatnya" style="resize:none;" class="form-control" placeholder="Alamat"></textarea>
+ 			<textarea name="alamat" id="alamattambahnya" style="resize:none;" class="form-control" placeholder="Alamat"></textarea>
  		</div>
  	</div>
  	<!-- thAjaranBaru -->
  	<div class="container">
  		<div class="col-md-2"><p>Tahun Pelajaran</p></div>
  		<div class="col-md-4">
- 			<select name="thajaran" class="form-control" id="thpelajarannya">
+ 			<select name="thajaran" class="form-control" id="thpelajarantambahnya">
  				<option value="">-- Pilih Tahun --</option>
  				<?php 
  				$q_ambil_thajaran = mysql_query("SELECT * FROM th_pelajaran");
@@ -93,19 +93,16 @@
  	<div class="container">
  		<div class="col-md-2"><p>Kelas</p></div>
  		<div class="col-md-4">
- 			<input type="text" class="form-control" id="kelasnya" placeholder="Kelas" autocomplete="off">
+ 			<input type="text" class="form-control" id="kelastambahnya" placeholder="Kelas" autocomplete="off">
  		</div>
  	</div>
  	<!-- jurusan baru -->
  	<div class="container">
  		<div class="col-md-2"><p>Jurusan</p></div>
  		<div class="col-md-4">
-	 		<select name="jurusan" class="form-control" id="jurusannya">
+	 		<select name="jurusan" class="form-control" id="jurusantambahnya">
  				<option value="">-- Pilih Jurusan --</option>
  				<?php 
- 				// $q_jurusan = mysql_query("SELECT siswa_tabel.id_jurusan FROM siswa_tabel WHERE id_siswa = $id_sis");
- 				// $array_jurusan_siswa = mysql_fetch_assoc($q_jurusan);
- 				// $id_jurusan_siswa = $array_jurusan_siswa['id_jurusan'];
  				$q_ambil_jurusan = mysql_query("SELECT * FROM jurusan");
  				$id = 1;
  				while ($array_jurusan = mysql_fetch_assoc($q_ambil_jurusan)) {
@@ -123,12 +120,9 @@
  	<div class="container">
  		<div class="col-md-2"><p>Golongan Darah</p></div>
  		<div class="col-md-4">
- 			<select name="goldar" class="form-control" id="goldarnya">
+ 			<select name="goldar" class="form-control" id="goldartambahnya">
  				<option value="">-- Pilih Golongan Darah --</option>
  				<?php 
- 				// $q_goldarah = mysql_query("SELECT bio_siswa.id_gol_darah FROM bio_siswa WHERE id_bio_siswa = $id_sis");
- 				// $array_goldar_siswa = mysql_fetch_assoc($q_goldarah);
- 				// $id_goldar_siswa = $array_goldar_siswa['id_gol_darah'];
  				$q_ambil_darah = mysql_query("SELECT * FROM goldar");
  				$id = 1;
  				while ($array_darah = mysql_fetch_assoc($q_ambil_darah)) {
@@ -145,13 +139,13 @@
  	<div class="container">
  		<div class="col-md-2"><p>Nama Ayah</p></div>
  		<div class="col-md-4">
- 			<input type="text" class="form-control" id="ayahnya" placeholder="Nama Ayah" autocomplete="off">
+ 			<input type="text" class="form-control" id="ayahtambahnya" placeholder="Nama Ayah" autocomplete="off">
 		</div>
  	</div>
  	<div class="container">
  		<div class="col-md-2"><p>Nama Ibu</p></div>
  		<div class="col-md-4">
- 			<input type="text" class="form-control" id="ibunya" placeholder="Nama Ibu" autocomplete="off">
+ 			<input type="text" class="form-control" id="ibutambahnya" placeholder="Nama Ibu" autocomplete="off">
  		</div>
  	</div>
  	<!-- <div class="container">

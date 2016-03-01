@@ -8,16 +8,8 @@
 		</a>
 	</li>
 	<li>
-		<a href="index.php?pilih=dt_ayah">
-			<i class="fa fa-gift"></i>
-			<span>Data Ayah</span>
+		<a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify">
+			<i class="fa fa-angle-double-left"></i>
 		</a>
 	</li>
-	<li>
-		<a href="index.php?pilih=dt_ibu">
-			<i class="fa fa-gift"></i>
-			<span>Data Ibu</span>
-		</a>
-	</li>
-	<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
 </ul>

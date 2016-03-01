@@ -9,13 +9,13 @@
 				bio_siswa.alamat,bio_siswa.foto,bio_siswa.qr,agama.agama,goldar.nama_goldar,
 				jurusan.nama_jurusan,siswa_tabel.id_siswa,th_pelajaran.th_pelajaran,dt_ayah.nama_ayah,dt_ibu.nama_ibu
 				FROM siswa_tabel
-				INNER JOIN bio_siswa ON siswa_tabel.id_siswa = bio_siswa.id_bio_siswa
-				INNER JOIN agama ON agama.id = bio_siswa.id_agama
-				INNER JOIN goldar ON goldar.id = bio_siswa.id_gol_darah
-				INNER JOIN jurusan ON jurusan.id_jurusan = siswa_tabel.id_jurusan
-				INNER JOIN th_pelajaran ON th_pelajaran.id_th_pelajaran = bio_siswa.id_th_ajaran
-				INNER JOIN dt_ayah ON dt_ayah.id_ayah = siswa_tabel.id_siswa AND dt_ayah.agama_ayah = agama.id
-				INNER JOIN dt_ibu ON dt_ibu.id_ibu = siswa_tabel.id_siswa AND dt_ibu.agama_ibu = agama.id";
+				LEFT JOIN bio_siswa ON siswa_tabel.id_siswa = bio_siswa.id_bio_siswa
+				LEFT JOIN agama ON agama.id = bio_siswa.id_agama
+				LEFT JOIN goldar ON goldar.id = bio_siswa.id_gol_darah
+				LEFT JOIN jurusan ON jurusan.id_jurusan = siswa_tabel.id_jurusan
+				LEFT JOIN th_pelajaran ON th_pelajaran.id_th_pelajaran = bio_siswa.id_th_ajaran
+				LEFT JOIN dt_ayah ON dt_ayah.id_ayah = siswa_tabel.id_siswa AND dt_ayah.agama_ayah = agama.id
+				LEFT JOIN dt_ibu ON dt_ibu.id_ibu = siswa_tabel.id_siswa AND dt_ibu.agama_ibu = agama.id";
 	$eks_siswa = mysql_query($q_siswa);
  ?>
  <table class="table table-striped table-bordered table-hovered" id="tblSiswa">

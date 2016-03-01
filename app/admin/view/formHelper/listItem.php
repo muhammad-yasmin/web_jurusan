@@ -24,21 +24,15 @@
 			<span>Alumni</span>
 		</a>
 	</li>
-	<li id="kantor">
-		<a href="?page=kantor">
-			<i class="fa fa-building"></i>
-			<span>Kantor Jurusan</span>
-		</a>
-	</li>
-	<li id="industri">
-		<a href="?page=industri">
-			<i class="fa fa-industry"></i>
-			<span>Industri</span>
+	<li id="galeri">
+		<a href="?page=galeri">
+			<i class="fa fa-photo"></i>
+			<span>Galeri</span>
 		</a>
 	</li>
 	<li id="feedback">
 		<a href="?page=feedback">
-			<i class="fa fa-server"></i>
+			<i class="fa fa-envelope"></i>
 			<span>Feedback</span>
 		</a>
 	</li>

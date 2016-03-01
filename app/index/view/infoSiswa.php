@@ -63,10 +63,13 @@
 				Preview Siswa
 			</div>
 			<div class="panel-body">
-				<div id="prevSiswa" class="printable"></div>
+				<iframe src="#" id="iframenya" name="iframenya" style="display: none;" frameborder="0"></iframe>
+				<form action="../model/printSiswa.php" id="formnya" method="post" target="iframenya">
+					<div id="prevSiswa"></div>
+				</form>
 				<div align="center" class="col-md-12">
 					<button class="btn btn-primary btn-md" id="back">Kembali</button>
-					<button type="submit" class="btn btn-warning btn-md" id="btnPrint">Print</button>
+					<button type="submit" class="btn btn-warning btn-md" id="printBtn">Print</button>
 				</div>
 			</div>
 		</div>
@@ -84,8 +87,8 @@
 	$(document).ready(function() {
 		$("#tblSiswa").dataTable();
 	});
-	$("#btnPrint").printPage({
-		url: '../view/infoSiswa.php'
+	$("#printBtn").click(function(){
+		$("#formnya").submit();
 	});
 </script>
 </body>

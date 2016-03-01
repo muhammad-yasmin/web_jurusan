@@ -1,3 +1,4 @@
+<?php require 'app/index/model/ctInd.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +9,7 @@
 	<meta name="author" content="">
 	<link rel="shortcut icon" href="assets/img/logo128.png">
 
-	<title>RPL | SMKN 5 MALANG</title>
+	<title><?= $jur['inisial']; ?> | SMKN 5 MALANG</title>
 	<link href="assets/css/bootstrap.css" rel="stylesheet">
 	<link href="assets/css/main.css" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
@@ -16,6 +17,7 @@
 	<link rel="stylesheet" href="assets/css/owl.carousel.css">
 	<link rel="stylesheet" href="assets/css/font.css">
 	<link rel="stylesheet" href="assets/css/animate.css">
+
   </head>
   <style>
 	#infoSiswa, #infoGuru, #infoAlumni {
@@ -33,13 +35,13 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </button>
-		  <a class="navbar-brand" href="#"><b>RPL | SMKN 5</b></a>
+		  <a class="navbar-brand" href="#"><b><?= $jur['inisial']; ?> | SMKN 5</b></a>
 		</div>
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
-			<li><a href="#">Galeri</a></li>
+			<li><a href="app/index/view/galeri.foto.php">Galeri</a></li>
 			<li><a href="#">Menu</a></li>
-			<li><a href="app/admin/">Login</a></li>
+			<li><a href="app/login/">Login</a></li>
 		  </ul>
 		</div><!--/.nav-collapse -->
 	  </div>
@@ -50,7 +52,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<h1><b>Selamat Datang</b></h1>
-					<h3>di Website Rekayasa Perangkat Lunak</h3>
+					<h3>di Website <?= $jur['nama_jurusan']; ?></h3>
 				</div><!-- /col-lg-6 -->
 			</div><!-- /row -->
 		</div><!-- /container -->
@@ -65,7 +67,7 @@
 		</div><!-- /row -->
 
 		<div class="row mt centered">
-			<div class="col-lg-4" id="infoSiswa">
+			<div class="col-lg-4">
 				<div class="icon">
 					<i class="fa fa-4x fa-book"></i>
 				</div>
@@ -73,7 +75,7 @@
 				<p>Fitur untuk siswa yang berguna sebagai media input data pribadi siswa, orang tua / wali, khususnya siswa jurusan Rekayasa Perangkat Lunak.</p>
 			</div><!--/col-lg-4 -->
 
-			<div class="col-lg-4" id="infoGuru">
+			<div class="col-lg-4">
 				<div class="icon">
 					<i class="fa fa-4x fa-users"></i>
 				</div>
@@ -81,8 +83,8 @@
 				<p>Fitur untuk guru yang berguna sebagai media input data pribadi guru, absensi, view nilai dan konfirmasi nilai siswa</p>
 			</div><!--/col-lg-4 -->
 
-			<div class="col-lg-4" id="infoAdmin">
-				<div class="icon" id="infoAlumni">
+			<div class="col-lg-4">
+				<div class="icon">
 					<i class="fa fa-4x fa-mortar-board"></i>
 				</div>
 				<h4>Alumni</h4>
@@ -96,7 +98,7 @@
 		<div class="row mt centered">
 			<div class="col-lg-6 col-lg-offset-3">
 				<h1>Tentang Kami</h1>
-				<h3>Rekayasa Perangkat Lunak</h3>
+				<h3><?= $jur['nama_jurusan']; ?></h3>
 			</div>
 			<div class="col-lg-12">
 				<h4>Kami adalah salah satu Program Keahlian yang terdapat di SMK Negeri 5 Malang<br>Rekayasa Perangkat Lunak di SMK Negeri 5 Malang memiliki kurang lebih 300 siswa baik kelas X, XI, dan XII</h4>
@@ -132,29 +134,46 @@
 			</div>
 		</div><!-- /row -->
 	</div><!--/container -->
+	
 	<hr class="container">
-	<?php require "app/index/model/ctInd.php"; ?>
+
+	<form method="post" id="panelForm">
 	<div class="container">
+		<h1 align="center">PortoFolio</h1>
 		<div class="row mt centered">
-			<div class="col-md-3">
+			<h2>Portofolio</h2>
+		</div>
+	</div>
+	</form>
+
+	<hr class="container">
+
+	<form method="post" id="panelForm">
+	<div class="container">
+		<h1 align="center">Data</h1>
+		<div class="row mt centered">
+			<div class="col-md-3" onclick="btnsiswa();">
 				<div class="icon-stats">
 					<i class="fa fa-4x fa-book"></i>
 					<h3 class=""><?= $siswa['COUNT(*)']; ?></h3>
 					<h4>Siswa</h4>
+					<!-- <a class="btn btn-info" name="btnsiswa" id="btnsiswa" onclick="btnsiswa();">SISWA</a> -->
 				</div>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3" onclick="btnguru();">
 				<div class="icon-stats">
 					<i class="fa fa-4x fa-users"></i>
 					<h3 class=""><?= $guru['COUNT(*)']; ?></h3>
 					<h4>Guru</h4>
+					<!-- <a class="btn btn-info" name="btnguru" id="btnguru">GURU</a> -->
 				</div>
 			</div>
 			<div class="col-md-3">
-				<div class="icon-stats">
+				<div class="icon-stats" onclick="btnalumni();">
 					<i class="fa fa-4x fa-mortar-board"></i>
-					<h3 class=""><?= $siswa['COUNT(*)']; ?></h3>
+					<h3 class=""><?= $alumni['COUNT(*)']; ?></h3>
 					<h4>Alumni</h4>
+					<!-- <a class="btn btn-info" name="btnalumni" id="btnalumni" onclick="btnalumni();">ALUMNI</a> -->
 				</div>
 			</div>
 			<div class="col-md-3">
@@ -162,10 +181,56 @@
 					<i class="fa fa-4x fa-image"></i>
 					<h3 class=""><?= $foto['COUNT(*)']; ?></h3>
 					<h4>Foto</h4>
+					<!-- <a class="btn btn-info" name="btnfoto" id="btnfoto">FOTO</a> -->
 				</div>
 			</div>
 		</div>
 	</div>
+	</form>
+	<!-- Siswa -->
+	<div class="container">
+		<div class="panel panel-default" id="panelPreviewSiswa" style="display:none;">
+		<div class="panel-heading">
+			<h3 align="center">Siswa</h3>
+		</div>
+		<div class="panel-body">
+			<div id="previewSiswa"></div>
+				<div align="center">
+					<button id="backsiswa" class="btn btn-sm btn-success"><i class="fa fa-chevron-left"></i> Kembali</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Guru -->
+	<div class="container">
+		<div class="panel panel-default" id="panelPreviewGuru" style="display:none;">
+		<div class="panel-heading">
+			<h3 align="center">Guru</h3>
+		</div>
+		<div class="panel-body">
+			<div id="previewGuru"></div>
+				<div align="center">
+					<button id="backguru" class="btn btn-sm btn-success"><i class="fa fa-chevron-left"></i> Kembali</button>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+	<!-- Alumni -->
+	<div class="container">
+		<div class="panel panel-default" id="panelPreviewAlumni" style="display:none;">
+		<div class="panel-heading">
+			<h3 align="center">Alumni</h3>
+		</div>
+		<div class="panel-body">
+			<div id="previewAlumni"></div>
+				<div align="center">
+					<button id="backalumni" class="btn btn-sm btn-success"><i class="fa fa-chevron-left"></i> Kembali</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<hr class="container">
 
 	<div class="container centered">

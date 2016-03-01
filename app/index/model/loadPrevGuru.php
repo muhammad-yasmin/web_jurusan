@@ -26,8 +26,8 @@
  			<?php echo $array['qr']; ?>
  		</div>
  	</div>
- </div>
- <div class="col-lg-6">
+</div>
+<div class="col-lg-6">
  	<div class="container">
  		<div class="col-md-2"><p>NIS</p></div>
  		<div class="col-md-4"><p><?php echo $array['nip']; ?></p></div>
@@ -55,65 +55,39 @@
  		<div class="col-md-4"><p><?php echo $array['nama_goldar']; ?></p></div>
  	</div>
 </div>
-<form action="" id="formnya" style="display:none;">
-	<div class="col-lg-3">
-	 	<div class="container">
-	 		<div class="col-md-4">
-	 			<?php echo "<img src='../../../assets/img/siswa/$array[foto]' alt='Foto Siswa' width='200' height='200'/> "; ?>
-	 		</div>
-	 	</div>
-	 	<div class="container">
-	 		<div class="col-md-4">
-	 			<?php echo $array['qr']; ?>
-	 		</div>
-	 	</div>
-	 </div>
-	 <div class="col-lg-6">
-	 	<div class="container">
-	 		<div class="col-md-2"><p>NIS</p></div>
-	 		<div class="col-md-4"><p><?php echo $array['nis']; ?></p></div>
-	 	</div>
-	 	<div class="container">
-	 		<div class="col-md-2"><p>Nama</p></div>
-	 		<div class="col-md-4"><p><?php echo $array['nama_siswa']; ?></p></div>
-	 	</div>
-	 	<div class="container">
-	 		<div class="col-md-2"><p>Tempat, Tanngal Lahir</p></div>
-	 		<div class="col-md-4">
-	 			<p><?php echo $array['tl_siswa'].', '.$array['tgl_siswa']; ?></p>
-	 		</div>
-	 	</div>
-	 	<div class="container">
-	 		<div class="col-md-2"><p>Agama</p></div>
-	 		<div class="col-md-4"><p><?php echo $array['agama']; ?></p></div>
-	 	</div>
-	 	<div class="container">
-	 		<div class="col-md-2"><p>Alamat</p></div>
-	 		<div class="col-md-4"><p><?php echo $array['alamat']; ?></p></div>
-	 	</div>
-	 	<div class="container">
-	 		<div class="col-md-2"><p>Tahun Pelajaran</p></div>
-	 		<div class="col-md-4"><p><?php echo $array['th_pelajaran']; ?></p></div>
-	 	</div>
-	 	<div class="container">
-	 		<div class="col-md-2"><p>Kelas</p></div>
-	 		<div class="col-md-4"><p><?php echo $array['kelas']; ?></p></div>
-	 	</div>
-	 	<div class="container">
-	 		<div class="col-md-2"><p>Jurusan</p></div>
-	 		<div class="col-md-4"><p><?php echo $array['nama_jurusan']; ?></p></div>
-	 	</div>
-	 	<div class="container">
-	 		<div class="col-md-2"><p>Golongan Darah</p></div>
-	 		<div class="col-md-4"><p><?php echo $array['nama_goldar']; ?></p></div>
-	 	</div>
-	 	<div class="container">
-	 		<div class="col-md-2"><p>Nama Ayah</p></div>
-	 		<div class="col-md-4"><p><?php echo $array['nama_ayah']; ?></p></div>
-	 	</div>
-	 	<div class="container">
-	 		<div class="col-md-2"><p>Nama Ibu</p></div>
-	 		<div class="col-md-4"><p><?php echo $array['nama_ibu']; ?></p></div>
-	 	</div>
-	</div>
-</form>
+<div class="col-lg-6" style="display: none;">
+ 	<div class="container">
+ 		<div class="col-md-2"><p>NIP</p></div>
+ 		<div class="col-md-4"><input type="text" name="printNip" value="<?php echo $array['nip']; ?>"></div>
+ 	</div>
+ 	<div class="container">
+ 		<div class="col-md-2"><p>Nama</p></div>
+ 		<div class="col-md-4"><input type="text" name="printNama" value="<?php echo $array['nama']; ?>"></div>
+ 	</div>
+ 	<div class="container">
+ 		<div class="col-md-2"><p>Tanngal Lahir</p></div>
+ 		<div class="col-md-4">
+ 			<input type="text" name="printTanggal" value="<?php echo $array['tgl_lahir']; ?>">
+ 		</div>
+ 	</div>
+ 	<div class="container">
+ 		<div class="col-md-2"><p>Agama</p></div>
+ 		<div class="col-md-4"><input type="text" name="printAgama" value="<?php echo $array['agama']; ?>"></div>
+ 	</div>
+ 	<div class="container">
+ 		<div class="col-md-2"><p>Alamat</p></div>
+ 		<div class="col-md-4"><input type="text" name="printAlamat" value="<?php echo $array['alamat']; ?>"></div>
+ 	</div>
+ 	<div class="container">
+ 		<div class="col-md-2"><p>Golongan Darah</p></div>
+ 		<div class="col-md-4"><input type="text" name="printGol" value="<?php echo $array['nama_goldar']; ?>"></div>
+ 	</div>
+ 	<div class="container">
+ 		<div class="col-md-2"><p>Foto</p></div>
+ 		<div class="col-md-4"><input type="text" name="printFoto" value="<?php echo $array['foto']; ?>"></div>
+ 	</div>
+ 	<div class="container">
+ 		<div class="col-md-2"><p>QR</p></div>
+ 		<div class="col-md-4"><input type="text" name="printQr" value="<?php echo $array['qr']; ?>"></div>
+ 	</div>
+</div>

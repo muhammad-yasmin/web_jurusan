@@ -40,6 +40,97 @@
 	$("#infoAlumni").click(function(){
 		window.location = "app/index/view/infoAlumni.php";
 	});
+	// Siswa
+	function loadPreviewSiswa(id){
+		$.ajax({
+			url: 'app/index/model/loadSiswa.php',
+			type: 'post',
+			data: {
+				id : id
+			},
+			success: function(data){
+				$("#previewSiswa").html(data);
+			},
+			error: function(xhr){
+				showModalMsg("Error 404");
+			}
+		});
+	}
+	function kePreviewsiswa(){
+		$("#panelForm").hide('slow', function(){
+			$("#panelPreviewSiswa").show('slow');
+		});
+	}
+	function btnsiswa(id){
+		loadPreviewSiswa(id);
+		kePreviewsiswa();
+	}
+	$("#backsiswa").click(function(){
+		$("#panelPreviewSiswa").hide('slow', function(){
+			$("#panelForm").show('slow');
+		});
+	});
+	// Guru
+	function loadPreviewGuru(id){
+		$.ajax({
+			url: 'app/index/model/loadGuru.php',
+			type: 'post',
+			data: {
+				id : id
+			},
+			success: function(data){
+				$("#previewGuru").html(data);
+			},
+			error: function(xhr){
+				showModalMsg("Error 404");
+			}
+		});
+	}
+	function kePreviewguru(){
+		$("#panelForm").hide('slow', function(){
+					$("#panelPreviewGuru").show('slow');
+				});
+	}
+	function btnguru(id){
+		loadPreviewGuru(id);
+		kePreviewguru();
+	}
+	$("#backguru").click(function(){
+		$("#panelPreviewGuru").hide('slow', function(){
+			$("#panelForm").show('slow');
+		});
+	});
+	// Alumni
+	function loadPreviewAlumni(id){
+		$.ajax({
+			url: 'app/index/model/loadAlumni.php',
+			type: 'post',
+			data: {
+				id : id
+			},
+			success: function(data){
+				$("#previewAlumni").html(data);
+			},
+			error: function(xhr){
+				showModalMsg("Error 404");
+			}
+		});
+	}
+	function kePreviewalumni(){
+		$("#panelForm").hide('slow', function(){
+					$("#panelPreviewAlumni").show('slow');
+				});
+	}
+	function btnalumni(id){
+		loadPreviewAlumni(id);
+		kePreviewalumni();
+	}
+	$("#backalumni").click(function(){
+		$("#panelPreviewAlumni").hide('slow', function(){
+			$("#panelForm").show('slow');
+		});
+	});
+
 	$(document).ready(function() {
 		$("#owlGuru1").owlCarousel({
 			slideSpeed : 500,

@@ -1,15 +1,21 @@
 <?php 
-	require '../model/admin.php'; 
-	if(!isset($_SESSION)){
-		session_start();
-		if (!isset($_SESSION['statusLog']) OR !isset($_SESSION['nama_admin'])) {
-			?>
-			<script>
-				window.location = "../";
-			</script>
-			<?php
+require '../model/admin.php';
+if(!isset($_SESSION)){ session_start(); }
+	if($_SESSION['statusLog'] == "sukses"){
+		$statusLog = true;
+		//---------------------------------
+		if (!isset($_REQUEST["pilih"])) {
+			$oyi = "";
+		} else {
+			$oyi = $_REQUEST["pilih"];
 		}
+	}else{
+		$statusLog = false;
+		header("location: ../../login/");
 	}
+$us = $_SESSION['user'];
+$q = mysql_query("SELECT * FROM admin WHERE username = '$us'");
+$w = mysql_fetch_assoc($q);
  ?>
 <html>
 	<head>
@@ -17,16 +23,15 @@
 		<title>CPanel | Website Jurusan</title>
 		<!-- ================== BEGIN BASE CSS STYLE ================== -->
 		<link rel="shortcut icon" href="../../../assets/img/logo128.png">
-		<link href="../../../assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
-		<link href="../../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="../../../assets/fonts/font-awesome/css/font-awesome.min.css">
-		<link href="../../../assets/css/animate.min.css" rel="stylesheet" />
-		<link href="../../../assets/css/style.min.css" rel="stylesheet" />
-		<link href="../../../assets/css/theme/default.css" rel="stylesheet" id="theme" />
-		<link rel="stylesheet" href="../../../assets/css/style.css">
+		<link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../../assets/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../../../assets/css/animate.css">
+		<link rel="stylesheet" href="../../../assets/css/style.min.css">
+		<link href="../../../assets/css/theme/blue.css" rel="stylesheet"/>
 		<link rel="stylesheet" href="../../../assets/plugins/datatables/dataTables.bootstrap.css">
 		<!-- ================== END BASE CSS STYLE ================== -->
 		<link rel="stylesheet" href="../../../assets/css/font.css">
+		<script src="../../../assets/js/jQuery-2.1.4.min.js"></script>
 		<script src="../../../assets/plugins/pace/pace.min.js"></script>
 		<!-- ================== END BASE JS ================== -->
 		<style>
@@ -48,8 +53,7 @@
 			<div id="header" class="header navbar navbar-default navbar-fixed-top">
 				<div class="container-fluid">
 					<div class="navbar-header">
-						<a href="#" class="navbar-brand">CPanel | Web Jurusan</a>
-						<button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+						<a href="#" class="navbar-brand">CPanel | Web Jurusan</a><button type="button" class="navbar-toggle" data-click="sidebar-toggled">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -74,7 +78,7 @@
 			
 			<div id="sidebar" class="sidebar">
 				<div data-scrollbar="true" data-height="100%">
-					<ul class="nav">
+					<ul class="nav nav-custom">
 						<li class="nav-profile">
 							<div class="image">
 								<a href="javascript:;"><?php echo "<img src='../../../assets/img/admin/$w[foto]' alt='' />" ?></a>
@@ -94,15 +98,13 @@
 					<?php
 						extract($_GET);
 						if(empty($_GET['page'])){
-							echo "";
-						} else if($_GET['page']=='lups'){
-							include "view/awal.php";
+							require "dashboard.php";
 						} else if($_GET['page']=='produk'){
 							include "view/produk.php";
 						} else if($_GET['page']=='galeri'){
 							include "galeri.php";
 						} else if($_GET['page']=='program_keahlian'){
-							include "view/program_keahlian.php";
+							include "prokel.php";
 						} else if($_GET['page']=='siswa'){
 							include "siswa.php";
 						} else if($_GET['page']=='guru'){
@@ -120,6 +122,7 @@
 				</div>
 			</div>
 			<a class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+		<?php require "../controller/ctAdmin.php"; ?>
 		<script src="../../../assets/js/bootstrap.min.js"></script>
 		<script src="../../../assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 		<script src="../../../assets/js/apps.min.js"></script>

@@ -4,20 +4,30 @@
 	$con = new clsDb;
 	$con->konek();
 	//---------------------------------------
-	if (!isset($_SESSION)) {
-		session_start();
-	} else {}
-
-	$nis_siswa = $_SESSION['nis'];
-	$q_siswa = "SELECT * FROM siswa WHERE siswa.nis='$nis_siswa'";
-	$eks_siswa = mysql_query($q_siswa);
-	$row_siswa = mysql_num_rows($eks_siswa);
-	if ($row_siswa == 1) {
-		$w = mysql_fetch_assoc($eks_siswa);
-		//-------------------------------
+	if(!isset($_SESSION)){ session_start(); }
+	if($_SESSION['statusLog'] == "sukses"){
+		$statusLog = true;
+		//---------------------------------
 		if (!isset($_REQUEST["pilih"])) {
 			$oyi = "";
 		} else {
 			$oyi = $_REQUEST["pilih"];
 		}
+	}else{
+		$statusLog = false;
+		header("location: ../../login/");
 	}
+	$us = $_SESSION['nis'];
+	$q = mysql_query("SELECT
+		siswa_tabel.nis,
+		siswa_tabel.nama_siswa,
+		siswa_tabel.jenis_kelamin,
+		siswa_tabel.kelas,
+		siswa_tabel.id_jurusan,
+		jurusan.nama_jurusan,
+		jurusan.id_jurusan
+		FROM siswa_tabel
+		INNER JOIN jurusan ON siswa_tabel.id_jurusan = jurusan.id_jurusan WHERE nis='$us'");
+	$w = mysql_fetch_assoc($q);
+
+?>

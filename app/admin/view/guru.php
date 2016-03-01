@@ -10,9 +10,9 @@
 		<div class="panel panel-inverse" id="pnlData">
 			<div class="panel-heading">
 				<div class="panel-heading-btn">
-					<a id="btnAddSiswa" class="btn btn-xs btn-success"><i class="fa fa-plus"></i> Tambah</a>
+					<a id="btnAddGuru" class="btn btn-xs btn-success"><i class="fa fa-plus"></i> Tambah</a>
 				</div>
-				<h4 class="panel-title">Data Siswa</h4>
+				<h4 class="panel-title">Data Guru</h4>
 			</div>
 			<div class="panel-body">
 			   <div id="listSiswa"></div>
@@ -21,10 +21,10 @@
 	
 		<div class="panel panel-inverse" id="pnlPrev" style="display:none;">
 			<div class="panel-heading">
-				<h4 class="panel-title">Preview Siswa</h4>
+				<h4 class="panel-title">Preview Guru</h4>
 			</div>
 			<div class="panel-body">
-			   <div id="previewSiswa"></div>
+			   <div id="previewGuru"></div>
 			   <div align="center" class="col-lg-12">
 			   		<button id="btnBackFromPrev" class="btn btn-md btn-default">Kembali</button>
 			   </div>
@@ -33,10 +33,10 @@
 	
 		<div class="panel panel-inverse" id="pnlUpdt" style="display:none;">
 			<div class="panel-heading">
-				<h4 class="panel-title">Update Siswa</h4>
+				<h4 class="panel-title">Update Data Guru</h4>
 			</div>
 			<div class="panel-body">
-			   <div id="updateSiswa"></div>
+			   <div id="updateGuru"></div>
 			   <div align="center" class="col-lg-12">
 			   		<button id="btnBackFromUpdt" class="btn btn-md btn-default">Kembali</button>
 			   		<button id="btnUpdt" class="btn btn-md btn-success">Simpan</button>
@@ -49,7 +49,7 @@
 				<h4 class="panel-title">Tambah Data Guru</h4>
 			</div>
 			<div class="panel-body">
-			   <div id="addSiswa"></div>
+			   <div id="addGuru"></div>
 			   <div align="center">
 			   		<button id="btnBackFromAdd" class="btn btn-md btn-danger">Batal</button>
 			   		<button id="btnAdd" class="btn btn-md btn-success">Simpan</button>
