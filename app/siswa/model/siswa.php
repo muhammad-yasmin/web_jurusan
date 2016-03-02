@@ -29,5 +29,4 @@
 		FROM siswa_tabel
 		INNER JOIN jurusan ON siswa_tabel.id_jurusan = jurusan.id_jurusan WHERE nis='$us'");
 	$w = mysql_fetch_assoc($q);
-
 ?>

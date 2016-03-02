@@ -49,8 +49,8 @@
 	function updateOnOff(id){
 		if ($("#aktifnya"+id).attr('checked')) {
 			$("#hasil"+id).html("off");
-		} else{
-			$("#hasil"+id).html("on")
+		} else {
+			$("#hasil"+id).html("on");
 		}
 		updateAktif(id);
 	}
@@ -62,8 +62,8 @@
 				hasil: $("#hasil"+id).html()
 			},
 			success: function(data){
-				showModal(data);
-				// loadGaleri();
+				// showModal("Berh");
+				loadGaleri();
 				// document.location.reload(true);
 			},
 			error: function(xhr){

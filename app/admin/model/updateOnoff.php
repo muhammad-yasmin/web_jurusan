@@ -7,6 +7,6 @@
 	$idnya = $_GET['id'];
 	$hasilnya = $_GET['hasil'];
 
-	echo $q = "UPDATE galeri SET aktif = '$hasilnya' WHERE id = $idnya";
-	// $eks = msql_query($q);
+	$q = "UPDATE galeri SET aktif = '$hasilnya' WHERE id = $idnya";
+	$eks = mysql_query($q);
  ?>

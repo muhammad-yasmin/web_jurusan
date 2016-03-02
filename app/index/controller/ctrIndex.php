@@ -58,7 +58,11 @@
 	}
 	function kePreviewsiswa(){
 		$("#panelForm").hide('slow', function(){
-			$("#panelPreviewSiswa").show('slow');
+			$("#panelPreviewGuru").hide('slow', function(){
+				$("#panelPreviewAlumni").hide('slow', function(){
+					$("#panelPreviewSiswa").show('slow');
+				});
+			});
 		});
 	}
 	function btnsiswa(id){
@@ -88,8 +92,12 @@
 	}
 	function kePreviewguru(){
 		$("#panelForm").hide('slow', function(){
+			$("#panelPreviewAlumni").hide('slow', function(){
+				$("#panelPreviewSiswa").hide('slow', function(){
 					$("#panelPreviewGuru").show('slow');
 				});
+			});
+		});
 	}
 	function btnguru(id){
 		loadPreviewGuru(id);
@@ -118,8 +126,12 @@
 	}
 	function kePreviewalumni(){
 		$("#panelForm").hide('slow', function(){
+			$("#panelPreviewSiswa").hide('slow', function(){
+				$("#panelPreviewGuru").hide('slow', function() {
 					$("#panelPreviewAlumni").show('slow');
 				});
+			})
+		});
 	}
 	function btnalumni(id){
 		loadPreviewAlumni(id);

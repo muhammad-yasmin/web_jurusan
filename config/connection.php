@@ -39,6 +39,7 @@
 				if ($w2 == 1) {
 					$d = mysql_fetch_assoc($l2);
 					$_SESSION['level'] = $d['level'];
+					$_SESSION['nis'] = $d['nis'];
 					$_SESSION['user'] = $d['nama_siswa'];
 					return "siswa";
 				}else{
@@ -48,20 +49,19 @@
 
 					if ($w3 == 1) {
 						$d = mysql_fetch_assoc($l3);
-
+						$_SESSION['nip'] = $d['nip'];
 						$_SESSION['level'] = $d['level'];
 						$_SESSION['user'] = $d['nama'];
 						return "guru";
-					} else {
-						$q_select_alumni = "SELECT * FROM alumni WHERE nis= '$user' AND password= '$pass'";
+					}else {
+						$q_select_alumni = "SELECT * FROM alumni WHERE nis= '$user' AND pass= '$pass'";
 						$l4 = mysql_query($q_select_alumni);
 						$w4 = mysql_num_rows($l4);
 
 						if ($w4 == 1) {
 							$d = mysql_fetch_assoc($l4);
-
-							$_SESSION['level'] = $d['level'];
-							$_SESSION['user'] = $d['nama_siswa'];
+							$_SESSION['nis'] = $d['nis'];
+							$_SESSION['user'] = $d['nama'];
 							return "alumni";
 						}
 					}

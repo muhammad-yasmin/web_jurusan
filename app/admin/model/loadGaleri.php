@@ -49,7 +49,7 @@
 	$q_galeri = "SELECT * FROM galeri";
 	$eks_galeri = mysql_query($q_galeri);
  ?>
- <table class="table table-bordered table-stripped table-hover" id="tblgaleri">
+ <table class="table table-bordered" id="tblgaleri">
  	<thead>
  		<tr>
  			<th width="1%">Aktif</th>

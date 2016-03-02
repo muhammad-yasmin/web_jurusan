@@ -34,21 +34,24 @@
 			$_SESSION['statusLog'] = "sukses";
 			?>
 			<script>
-				alert("Siswa");
+				// alert("Siswa");
+				window.location = "../../siswa/index.php?pilih=dt_diri";
 			</script>
 			<?php
 		} else if ($hasilLog == "guru") {
 			$_SESSION['statusLog'] = "sukses";
 			?>
 			<script>
-				alert("Guru");
+				// alert("Guru");
+				window.location = "../../guru/index.php?pilih=dt_diri.php";
 			</script>
 			<?php
 		} else if ($hasilLog == "alumni") {
 			$_SESSION['statusLog'] = "sukses";
 			?>
 			<script>
-				alert("Alumni");
+				// alert("Alumni");
+				window.location = "../../alumni/index.php?pilih=dt_diri";
 			</script>
 			<?php
 		} else {
@@ -56,6 +59,7 @@
 			?>
 			<script>
 				alert("Maaf");
+				window.location.replace('../');
 			</script>
 			<?php
 		}

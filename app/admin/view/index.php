@@ -100,7 +100,7 @@ $w = mysql_fetch_assoc($q);
 						if(empty($_GET['page'])){
 							require "dashboard.php";
 						} else if($_GET['page']=='produk'){
-							include "view/produk.php";
+							include "produk.php";
 						} else if($_GET['page']=='galeri'){
 							include "galeri.php";
 						} else if($_GET['page']=='program_keahlian'){

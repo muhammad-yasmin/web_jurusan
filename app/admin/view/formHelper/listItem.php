@@ -30,6 +30,12 @@
 			<span>Galeri</span>
 		</a>
 	</li>
+	<li id="galeri">
+		<a href="?page=produk">
+			<i class="fa fa-photo"></i>
+			<span>Produk</span>
+		</a>
+	</li>
 	<li id="feedback">
 		<a href="?page=feedback">
 			<i class="fa fa-envelope"></i>
